@@ -23,20 +23,26 @@ describe('CalculadoraService', () => {
     }))
 
     it ('deve garantir que 1 / 4 = 0.25',
+      inject([ CalculadoraService ], (service: CalculadoraService) => {
+      let divisao = service.calcular(1,4, CalculadoraService.DIVISAO);
+      expect(divisao).toEqual(0.25);
+  }))
+
+  it ('deve garantir que 1 / 4 = 0.25',
     inject([ CalculadoraService ], (service: CalculadoraService) => {
     let divisao = service.calcular(1,4, CalculadoraService.DIVISAO);
     expect(divisao).toEqual(0.25);
+  }))
 
-    it ('deve garantir que 1 * 4 = 4',
+  it ('deve garantir que 1 * 4 = 4',
     inject([ CalculadoraService ], (service: CalculadoraService) => {
     let multiplicacao = service.calcular(1,4, CalculadoraService.MULTIPLICACAO);
     expect(multiplicacao).toEqual(4);
-    }))
+  }))
 
-    it ('deve retornar 0 para operação inválida',
+  it ('deve retornar 0 para operação inválida',
     inject([ CalculadoraService ], (service: CalculadoraService) => {
     let operacaoInvalida = service.calcular(1,4, '%');
     expect(operacaoInvalida).toEqual(0);
-    }))
-    }))
-});
+  }))
+})
