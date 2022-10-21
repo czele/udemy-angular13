@@ -1,5 +1,4 @@
 import { JogoDaVelhaModule } from './jogo-da-velha/jogo-da-velha.module';
-import { JogoDaVelhaComponent } from './jogo-da-velha/jogo-da-velha.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
