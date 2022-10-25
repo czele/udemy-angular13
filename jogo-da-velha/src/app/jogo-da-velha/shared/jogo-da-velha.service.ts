@@ -34,8 +34,8 @@ export class JogoDaVelhaService {
     this.vitoria = false;
     this.inicializarTabuleiro();
   }
-  //Inicializa o tabuleiro com vazio para todas as posiçãoes
 
+  //Inicializa o tabuleiro com vazio para todas as posiçãoes
   inicializarTabuleiro(): void {
     this.tabuleiro = [this.TAM_TAB];
     for (let i = 0; i< this.TAM_TAB; i++) {
@@ -49,7 +49,6 @@ export class JogoDaVelhaService {
   }
 
   //Retorna se o tabuleiro deve ser exibido
-
   get showTabuleiro(): boolean {
     return this._showTabuleiro;
   }

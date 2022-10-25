@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jogo-da-velha.component.css']
 })
 export class JogoDaVelhaComponent implements OnInit {
+  JogoDaVelhaService: any;
 
   constructor(private jogoDaVelhaService: JogoDaVelhaService) { }
 
@@ -25,8 +26,8 @@ export class JogoDaVelhaComponent implements OnInit {
   }
 
   //Retorna se a tela de fim de jogo deve ser exibida
-get showFinal(): boolean {
-  return this.jogoDaVelhaService.showFinal;
+  get showFinal(): boolean {
+    return this.jogoDaVelhaService.showFinal;
 }
 
   //Inicia o jogo quando clica no botão "iniciar"
@@ -55,4 +56,11 @@ get showFinal(): boolean {
   }
 
   //Retorna o número do jogador a jogar
+  get jogador(): number {
+    return this.jogoDaVelhaService.jogador;
+  }
+
+  //Inicia um novo jogo
+  novoJogo(): void {
+    this.jogoDaVelhaService.novoJogo();}
 }
