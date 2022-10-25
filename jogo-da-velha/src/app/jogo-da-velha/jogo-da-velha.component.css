@@ -59,3 +59,7 @@ background-image: url('/assets/imagens/o.png');
 .kz-cor-vitoria {
  background-color: lightgreen;
 }
+
+.kz-cor-derrota {
+  background-color: lightcoral;
+ }
