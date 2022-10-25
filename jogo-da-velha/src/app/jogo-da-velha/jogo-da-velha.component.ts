@@ -25,6 +25,34 @@ export class JogoDaVelhaComponent implements OnInit {
   }
 
   //Retorna se a tela de fim de jogo deve ser exibida
+get showFinal(): boolean {
+  return this.jogoDaVelhaService.showFinal;
+}
 
+  //Inicia o jogo quando clica no botão "iniciar"
+  iniciarJogo(): void {
+    this.jogoDaVelhaService.iniciarJogo();
+  }
 
+  //Faz a jogada, caso se clique no tabuleiro
+  jogar(posX: number, posY: number): void {
+    this.jogoDaVelhaService.jogar(posX, posY);
+  }
+
+  //Retonar se a peça X deve ser esibida para a coordenada informada
+  exibirX(posX: number, posY: number): boolean {
+    return this.jogoDaVelhaService.exibirX(posX, posY);
+  }
+
+  //Retonar se a peça O deve ser esibida para a coordenada informada
+  exibirO(posX: number, posY: number): boolean {
+    return this.jogoDaVelhaService.exibirO(posX, posY);
+  }
+
+  //Retorna se a marcação de vitória deve ser exibida para a coordenada informada
+  exibirVitoria(posX: number, posY: number): boolean {
+    return this.jogoDaVelhaService.exibirVitoria(posX, posY);
+  }
+
+  //Retorna o número do jogador a jogar
 }
