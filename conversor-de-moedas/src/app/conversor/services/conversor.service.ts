@@ -11,7 +11,7 @@ import { Conversao } from '../models/conversao.model';
 export class ConversorService {
   // Nova url do fixer.io, que adiciona o parâmetro access_key, que é a chave de autenticação
   //private readonly BASE_URL = "http://api.fixer.io/latest";
-  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=eba7130a5b2d720ce43eb5fcddd47cc3";
+  readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=eba7130a5b2d720ce43eb5fcddd47cc3";
 
   constructor(private http: HttpClient) {}
 
@@ -34,7 +34,6 @@ export class ConversorService {
 
   return conversaoResponse.rates[conversao.moedaPara];
   }
-
 
   // * Retorna a cotação de dado uma response.
   cotacaoDe(conversaoResponse: ConversaoResponse,
