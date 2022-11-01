@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { pairwise } from 'rxjs';
 
 import { CalculadoraService } from './../services/calculadora.service';
+
 @Component({
   selector: 'app-calculadora',
   templateUrl: './calculadora.component.html',
   styleUrls: ['./calculadora.component.css']
 })
+
 export class CalculadoraComponent implements OnInit {
 
   private numero1: string;
@@ -14,7 +16,7 @@ export class CalculadoraComponent implements OnInit {
   private resultado: number;
   private operacao: string;
 
-  constructor(private calculadoraService: CalculadoraService) { }
+  constructor (private calculadoraService: CalculadoraService) { }
 
   ngOnInit(): void {
     this.limpar();
