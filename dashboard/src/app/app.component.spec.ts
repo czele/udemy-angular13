@@ -1,3 +1,5 @@
+import { DadosService } from './dashboard/dados.service';
+import { DashboardModule } from './dashboard/dashboard.module';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
@@ -6,11 +8,15 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        DashboardModule
       ],
       declarations: [
         AppComponent
       ],
+      providers: [
+        DadosService,
+      ]
     }).compileComponents();
   });
 
@@ -20,10 +26,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'dashboard'`, () => {
+  it(`should have as title 'Dashboard'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('dashboard');
+    expect(app.title).toEqual('Dashboard');
   });
 
   it('should render title', () => {
