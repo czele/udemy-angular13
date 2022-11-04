@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    //O AppRoutingModule sempre tem que ser o último na ordem, seus filhos devem vir antes.
     AppRoutingModule
   ],
   providers: [],
