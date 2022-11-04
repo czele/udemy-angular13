@@ -32,5 +32,9 @@
   </div>
 </nav>
 <div class="container-fluid">
-  <router-outlet></router-outlet>
+  <router-outlet>
+    <a [routerLink]="['/dashboard']">
+      Dashboard
+  </a>
+  </router-outlet>
 </div>
