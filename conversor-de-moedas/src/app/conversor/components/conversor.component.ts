@@ -20,11 +20,10 @@ export class ConversorComponent implements OnInit {
   conversaoResponse: ConversaoResponse;
 
   @ViewChild("conversaoForm", { static: true }) conversaoForm: NgForm;
-  moedaService: any;
 
   constructor(
-    moedaService: MoedaService,
-    conversorService: ConversorService
+    private moedaService: MoedaService,
+    private conversorService: ConversorService
   ) { }
 
   ngOnInit(): void {
