@@ -23,6 +23,7 @@ export class ConversorComponent implements OnInit {
 
   constructor(
     private moedaService: MoedaService,
+    //Não entendi porque é obrigatório usar o private aqui.
     private conversorService: ConversorService
   ) { }
 
@@ -30,6 +31,7 @@ export class ConversorComponent implements OnInit {
     this.moedas = this.moedaService.listarTodas();
     this.init();
   }
+
 
   //Efetua a chamada para a conversão de valores
   init(): void {
