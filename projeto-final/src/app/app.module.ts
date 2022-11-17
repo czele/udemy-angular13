@@ -1,3 +1,5 @@
+import { JogoDaVelhaModule } from './jogo-da-velha/jogo-da-velha.module';
+import { JogoDaVelhaComponent } from './jogo-da-velha/jogo-da-velha.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -6,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CalculadoraModule } from './calculadora/calculadora.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ConversorModule } from './conversor/conversor.module';
+import { TarefasModule } from './tarefas/tarefas.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,8 @@ import { ConversorModule } from './conversor/conversor.module';
     DashboardModule,
     CalculadoraModule,
     ConversorModule,
+    TarefasModule,
+    JogoDaVelhaModule,
     //O AppRoutingModule sempre tem que ser o último na ordem, seus filhos devem vir antes.
     AppRoutingModule
   ],

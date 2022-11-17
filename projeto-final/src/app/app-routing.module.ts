@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CalculadoraRoutes } from './calculadora/components/calculadora-routing.module';
 import { ConversorRoutes } from './conversor/conversor-routing.module';
 import { DashboardRoutes } from './dashboard/dashboard-routing.module';
+import { JogoDaVelhaRoutes } from './jogo-da-velha/jogo-da-velha-routing.module';
+import { TarefaRoutes } from './tarefas/tarefas-routing.module';
 
 const routes: Routes = [
   {
@@ -14,7 +16,9 @@ const routes: Routes = [
   // spread operator
   ...DashboardRoutes,
   ...CalculadoraRoutes,
-  ...ConversorRoutes
+  ...ConversorRoutes,
+  ...TarefaRoutes,
+  ...JogoDaVelhaRoutes
 ];
 
 @NgModule({
