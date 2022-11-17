@@ -1,7 +1,7 @@
 <br />
 <div class="alert alert-danger"
 	role="alert"
-  *nfIf="possuiErro">
+  *ngIf="possuiErro">
 	Erro obtendo dados. Tente novamente.
 </div>
 <div class="panel panel-success">
@@ -46,11 +46,17 @@
 			type="submit"
 			value="Converter"
 			class="btn btn-success"
-			data-toggle="modal"
-			data-target="#modalCotacao"
+			data-bs-toggle="modal"
+			data-bs-target="#modalCotacao"
 			(click)="converter()"
 			[disabled]="!conversaoForm.form.valid">
       {{ conversaoResponse | json }}
 	  </form>
 	 </div>
+   <modal-cotacao
+    [id]="'modalCotacao'"
+    [conversaoResponse]="conversaoResponse"
+    [conversao]="conversao"
+    (onConfirm)="init()">
+  </modal-cotacao>
 </div>
